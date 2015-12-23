@@ -1,0 +1,24 @@
+<!-- Button -->
+<a-entity 
+  class="overlayToggleButton"
+  position="0 1.2 0" 
+  geometry="primitive: cylinder; radius: 2; height: .2; openEnded: false"
+  material="color: rgb(37,232,152); roughness: 0; metalness: 0">
+  <a-animation begin="overLayButtonisInFocus" attribute="scale" from="1 1 1" to="0.9 0.9 0.9" dur="400" easing="ease-out"></a-animation>
+  <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="300" easing="ease-out"></a-animation>
+</a-entity>
+<!-- Waves -->
+<a-entity
+  id="overlayToggleWaves"
+  position="0 1 0"
+  rotation="90 0 0"
+  geometry="primitive: torus; radiusTubular: .05; radius: 1.8; height: .1; openEnded: false; segmentsTubular: 100;"
+  material="transparent: true; color: rgb(37,232,152); roughness: 0; metalness: 0; opacity: 0.9;">
+  <a-animation begin="overLayButtonisInFocus" attribute="scale" from="1 1 1" to="1.4 1.4 1.4" dur="400" easing="ease-in"></a-animation>
+  <a-animation begin="lostFocus" attribute="scale" to="1 1 1"></a-animation>
+</a-entity>
+<!-- Text -->
+<a-image 
+  class="overlayToggleButton"
+  position="0 1.4 0" rotation="-90 -72 0" src="public/images/overlay.png" width="2.41" height="0.58">
+</a-image>

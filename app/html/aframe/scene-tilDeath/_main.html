@@ -1,0 +1,18 @@
+<!-- Sky -->
+<a-sky class="scene-tilDeath" src="./public/images/tildeath-sphere.jpg" visible="false" rotation="0 -105 0">
+  <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>
+  <a-animation attribute="visible" from="true" to="false" begin="hideScene" dur="1" fill="both"></a-animation>
+</a-sky>
+<!-- Now Playing -->
+<a-image class="scene-tilDeath" position="6.5 10 -3.5" rotation="0 -90 0" src="public/images/tilDeath-logo.png" width="1.6" height="1" scale="1.8 1.8 1.8" visible="false">
+  <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="revealScene" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="1.8 1.8 1.8" to="0 0 0" begin="hideScene" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="visible" from="true" to="false" begin="hideScene" dur="1" fill="both"></a-animation>
+</a-image>
+<a-image class="scene-tilDeath" position="6.5 8.5 -3.5" rotation="0 -90 0" src="public/images/tilDeath-title.png" width="1.6" height="0.15" scale="1.8 1.8 1.8" visible="false">
+  <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="revealScene" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="1.8 1.8 1.8" to="0 0 0" begin="hideScene" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="visible" from="true" to="false" begin="hideScene" dur="1" fill="both"></a-animation>
+</a-image>
