@@ -1,0 +1,37 @@
+<!-- Previous Scene Button -->
+<a-image 
+  id="previousSceneButton"
+  position="6.5 9.5 -7.5" rotation="0 -90 0" src="public/images/arrow.png" width="0.762" height="0.762">
+  <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="2700" dur="350" fill="both" easing="ease-out"></a-animation>
+</a-image>
+<a-entity
+  id="previousSceneWaves"
+  position="6.5 9.5 -7.5"
+  rotation="0 -90 0"
+  visible="false"
+  geometry="primitive: torus; radiusTubular: .01; radius: 0.4; height: .1; openEnded: false; segmentsTubular: 40;"
+  material="transparent: true; color: rgb(255,255,255); roughness: 0; metalness: 0; opacity: 1;">
+  <a-animation begin="3300" attribute="visible" to="true"></a-animation>
+  <a-animation begin="previousSceneButtonisInFocus" attribute="scale" from="1 1 1" to="1.2 1.2 1.2" dur="200" easing="ease-in"></a-animation>
+  <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="200"></a-animation>
+</a-entity>
+
+<!-- Next Scene Button -->
+<a-image 
+  id="nextSceneButton"
+  position="6.5 9.5 0.5" rotation="0 -90 180" src="public/images/arrow.png" width="0.762" height="0.762">
+  <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="2900" dur="350" fill="both" easing="ease-out"></a-animation>
+</a-image>
+<a-entity
+  id="nextSceneWaves"
+  position="6.5 9.5 0.5"
+  rotation="0 -90 0"
+  visible="false"
+  geometry="primitive: torus; radiusTubular: .01; radius: 0.4; height: .1; openEnded: false; segmentsTubular: 40;"
+  material="transparent: true; color: rgb(255,255,255); roughness: 0; metalness: 0; opacity: 1;">
+  <a-animation begin="3300" attribute="visible" to="true"></a-animation>
+  <a-animation begin="nextSceneButtonisInFocus" attribute="scale" from="1 1 1" to="1.2 1.2 1.2" dur="200" easing="ease-in"></a-animation>
+  <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="200"></a-animation>
+</a-entity>

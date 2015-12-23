@@ -1,0 +1,31 @@
+* {
+  transition: .35s;
+}
+
+body {
+  height: 101vh;
+  font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 10px;
+}
+
+hr {
+  width: 80%;
+  border: 1px solid rgba(255, 255, 255, .1);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h4 {
+  font-weight: 300;
+  margin-top: 4vh;
+}
+
+.visible {
+  z-index: 200;
+  opacity: 1;
+}

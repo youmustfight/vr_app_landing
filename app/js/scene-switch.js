@@ -48,21 +48,25 @@ var initiatePreviousScene = function(){
   }
 }
 
-// A-Scene Editing
+// A-Scene Setup
 var sceneAdjustments = function(sceneName){
   var entity = document.querySelector('#a-frame-scene-container');
   if (sceneName == "cubes") {
-    entity.setAttribute("fog", "type: linear; color: #240B57; far: 21; near: 10")
+    entity.setAttribute("fog", "type: linear; color: #240B57; far: 21; near: 8")
   }
   if (sceneName == "tilDeath") {
     entity.setAttribute("fog", "type: linear; color: #240B57; far: 6001; near: 6000;");
   }
 }
 
-// Events for Next/Previous
-document.querySelector('#nextSceneButton').addEventListener('click', function(){
-  initiateNextScene();
-});
-document.querySelector('#previousSceneButton').addEventListener('click', function(){
-  initiatePreviousScene();
-});
+// Initialize Scene
+sceneAdjustments("cubes")
+
+// Set in motion automatic transitions
+var sceneSlideShowingLoop = function(){
+  setTimeout(function(){
+    initiateNextScene();
+    sceneSlideShowingLoop();
+  }, 8000)
+}
+sceneSlideShowingLoop();
