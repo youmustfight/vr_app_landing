@@ -1,0 +1,55 @@
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  background-color: rgba(37, 232, 152, 0.95);
+
+  text-align: center;
+  color: white;
+
+  hr {
+    opacity: 0.2;
+  }
+
+  input, button {
+    width: 100%;
+    padding: 9px 14px 8px;
+    border: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #000;
+    background: #ffffff; 
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+  input {
+    margin-bottom: 12px;
+  }
+
+  .container {
+    height: 100vh;
+    overflow: scroll;
+  }
+
+  img.eevo {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    margin-top: 10vh;
+  }
+
+  img.platform {
+    float: center;
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

@@ -11,7 +11,7 @@ var overlayShow = function(){
   overlayShowing = true;
   console.log('Revealing Section');
   $('.overlay-content').show();
-  $('.overlay-content').fadeTo("150", .95, function(){
+  $('.overlay-content').fadeTo("150", 1, function(){
     console.log('Animation Complete');
   });
 }

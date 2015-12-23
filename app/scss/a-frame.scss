@@ -1,0 +1,12 @@
+// Over-rides on A-Canvas
+
+.a-canvas, canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+}
+
+.a-enter-vr {
+  z-index: 200;
+}

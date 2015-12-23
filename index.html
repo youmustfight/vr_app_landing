@@ -16,7 +16,7 @@
 
   <!-- A-Frame -->
     <!-- Universal A-Frame Entities -->
-<a-scene id="a-frame-scene-container" fog="type: linear; color: #240B57; far: 21; near: 10">
+<a-scene id="a-frame-scene-container">
   <a-camera cursor-visible="true" position="0 9.2 0" rotation="0 -64 0"></a-camera>
 
   <!-- Persistent Sections between Scenes -->
@@ -27,18 +27,43 @@
 </a-image>
 
 <!-- Scene Switch Button -->
+<!-- Previous Scene Button -->
 <a-image 
   id="previousSceneButton"
   position="6.5 9.5 -7.5" rotation="0 -90 0" src="public/images/arrow.png" width="0.762" height="0.762">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
   <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="2700" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
+<a-entity
+  id="previousSceneWaves"
+  position="6.5 9.5 -7.5"
+  rotation="0 -90 0"
+  visible="false"
+  geometry="primitive: torus; radiusTubular: .01; radius: 0.4; height: .1; openEnded: false; segmentsTubular: 40;"
+  material="transparent: true; color: rgb(255,255,255); roughness: 0; metalness: 0; opacity: 1;">
+  <a-animation begin="3300" attribute="visible" to="true"></a-animation>
+  <a-animation begin="previousSceneButtonisInFocus" attribute="scale" from="1 1 1" to="1.2 1.2 1.2" dur="200" easing="ease-in"></a-animation>
+  <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="200"></a-animation>
+</a-entity>
+
+<!-- Next Scene Button -->
 <a-image 
   id="nextSceneButton"
   position="6.5 9.5 0.5" rotation="0 -90 180" src="public/images/arrow.png" width="0.762" height="0.762">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
   <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="2900" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
+<a-entity
+  id="nextSceneWaves"
+  position="6.5 9.5 0.5"
+  rotation="0 -90 0"
+  visible="false"
+  geometry="primitive: torus; radiusTubular: .01; radius: 0.4; height: .1; openEnded: false; segmentsTubular: 40;"
+  material="transparent: true; color: rgb(255,255,255); roughness: 0; metalness: 0; opacity: 1;">
+  <a-animation begin="3300" attribute="visible" to="true"></a-animation>
+  <a-animation begin="nextSceneButtonisInFocus" attribute="scale" from="1 1 1" to="1.2 1.2 1.2" dur="200" easing="ease-in"></a-animation>
+  <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="200"></a-animation>
+</a-entity>
 
 <!-- Available For -->
 <a-image position="6.5 6.5 -3.5" rotation="0 -90 0" src="public/images/tagline2.png" width="0.87" height="0.13">
@@ -202,13 +227,26 @@
   <!-- Menu Overlay -->
     <div class="overlay-content">
   <div class="container">
-    <section class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <h1>Testing Overlay Scroll</h1>
+    <section class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <img class="eevo" src="public/images/logo.png" >
+      <h5>Download For:</h5>
+      <img class="platform" src="public/images/cardboard.png" href="#">
+      <img class="platform" src="public/images/google-play.png" href="#">
+      <img class="platform" src="public/images/oculus.png" href="#">
+      <!-- <h1>A Platform to Discover and Launch Virtual Reality Experiences</h1> -->
       <hr>
-      <p>Lets hope this works</p>
-      <p>If it does, then we can do a more normal landing page experience here, with the usual footer and CTAs.</p>
-      <h2> <\3 </h2>
-      <br>
+      <h3>Are You a Creator?</h3>
+      <h5>Upload Once and Be Discovered Everywhere</h5>
+      <form>
+        <input type="email">
+        <button>Get In Touch</button>
+      </form>
+      <hr>
+      <h3>Want to Have a Uniquely Branded VR App?</h3>
+      <button href="#">See EEVO Edge</button>
+      <div class="overlay-links">
+        
+      </div>
     </section>
   </div>
 </div>
