@@ -14,4 +14,7 @@
 
 .a-enter-vr-modal {
   height: 50px !important;
+  @media (max-width: 768px) {
+    display: none !important;
+  }
 }
