@@ -1,12 +1,17 @@
 // Over-rides on A-Canvas
-
 .a-canvas, canvas {
-  height: 100%;
+  height: 100% !important;
   width: 100%;
   position: absolute;
-  z-index: 100;
+  z-index: 200;
 }
 
 .a-enter-vr {
-  z-index: 200;
+  z-index: 400;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.a-enter-vr-modal {
+  height: 50px !important;
 }
