@@ -67,6 +67,6 @@ var sceneSlideShowingLoop = function(){
   setTimeout(function(){
     initiateNextScene();
     sceneSlideShowingLoop();
-  }, 8000)
+  }, 11000)
 }
 sceneSlideShowingLoop();

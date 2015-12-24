@@ -66,11 +66,14 @@ h4 {
     height: auto;
     padding: 12px;
     margin-top: 10vh; }
-  .overlay-content img.platform {
-    float: center;
-    height: 40px;
-    margin-right: 20px;
+  .overlay-content .platform {
+    height: 36px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-bottom: 20px;
     margin-top: 20px; }
-    .overlay-content img.platform:last-of-type {
-      margin-right: 0; }
+  .overlay-content .overlay-links {
+    margin-top: 2rem;
+    margin-bottom: 6rem; }
+  .overlay-content .close-overlay {
+    cursor: pointer; }
