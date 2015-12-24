@@ -66,9 +66,9 @@ document.querySelector('#previousSceneButton').addEventListener('mouseleave', fu
 
 
 // Clicks for Scene Change
-document.querySelector('#nextSceneButton').addEventListener('click', function(){
-  initiateNextScene();
-});
-document.querySelector('#previousSceneButton').addEventListener('click', function(){
-  initiatePreviousScene();
-});
+// document.querySelector('#nextSceneButton').addEventListener('click', function(){
+//   initiateNextScene();
+// });
+// document.querySelector('#previousSceneButton').addEventListener('click', function(){
+//   initiatePreviousScene();
+// });

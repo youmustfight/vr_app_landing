@@ -33,3 +33,11 @@ var overlayToggle  = function(newState){
     overlayHide();
   }
 }
+
+var closeOverlayButtons = document.querySelectorAll(".close-overlay");
+
+for (var i = 0; i < closeOverlayButtons.length; i++){
+  closeOverlayButtons[i].addEventListener('click', function(){
+    overlayToggle(false);
+  })
+}

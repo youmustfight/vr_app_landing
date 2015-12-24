@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 400;
+  z-index: 500;
   width: 100vw;
   height: 100vh;
   display: none;
@@ -28,6 +28,7 @@
   }
   input {
     margin-bottom: 12px;
+    text-align: center;
   }
 
   .container {
@@ -43,14 +44,20 @@
     margin-top: 10vh;
   }
 
-  img.platform {
-    float: center;
-    height: 40px;
-    margin-right: 20px;
+  .platform {
+    height: 36px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
-    &:last-of-type {
-      margin-right: 0;
-    }
+  }
+
+  .overlay-links {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .close-overlay {
+    cursor: pointer;
   }
 }
