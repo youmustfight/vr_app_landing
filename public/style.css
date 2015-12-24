@@ -61,7 +61,8 @@ h4 {
     background: #ffffff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
   .overlay-content input {
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    text-align: center; }
   .overlay-content .container {
     height: 100vh;
     overflow: scroll; }
