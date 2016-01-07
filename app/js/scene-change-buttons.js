@@ -25,42 +25,42 @@ var generateWave2 = function(count, name, func){
 document.querySelector('#nextSceneButton').addEventListener('mouseenter', function(){
   var button = this;
   nextSceneButtonIsHovered = true;
-  button.setAttribute("visible", "false");
-  button.setAttribute("src","public/images/arrow-hover.png")
-  setTimeout(function(){
-    button.setAttribute("visible", "true");
-  });
+  // button.setAttribute("visible", "false");
+  // button.setAttribute("src","public/images/arrow-hover.png")
+  // setTimeout(function(){
+  //   button.setAttribute("visible", "true");
+  // });
   generateWave2(0, "nextScene", initiateNextScene);
 });
 document.querySelector('#nextSceneButton').addEventListener('mouseleave', function(){
   var button = this;
   nextSceneButtonIsHovered = false;
-  button.setAttribute("visible", "false");
-  button.setAttribute("src","public/images/arrow.png")
-  setTimeout(function(){
-    button.setAttribute("visible", "true");
-  })
+  // button.setAttribute("visible", "false");
+  // button.setAttribute("src","public/images/arrow.png")
+  // setTimeout(function(){
+  //   button.setAttribute("visible", "true");
+  // })
 });
 
 
 document.querySelector('#previousSceneButton').addEventListener('mouseenter', function(){
   var button = this;
   previousSceneButtonIsHovered = true;
-  button.setAttribute("visible", "false");
-  button.setAttribute("src","public/images/arrow-hover.png")
-  setTimeout(function(){
-    button.setAttribute("visible", "true");
-  });
+  // button.setAttribute("visible", "false");
+  // button.setAttribute("src","public/images/arrow-hover.png")
+  // setTimeout(function(){
+  //   button.setAttribute("visible", "true");
+  // });
   generateWave2(0, "previousScene", initiatePreviousScene);
 });
 document.querySelector('#previousSceneButton').addEventListener('mouseleave', function(){
   var button = this;
   previousSceneButtonIsHovered = false;
-  button.setAttribute("visible", "false");
-  button.setAttribute("src","public/images/arrow.png")
-  setTimeout(function(){
-    button.setAttribute("visible", "true");
-  })
+  // button.setAttribute("visible", "false");
+  // button.setAttribute("src","public/images/arrow.png")
+  // setTimeout(function(){
+  //   button.setAttribute("visible", "true");
+  // })
 });
 
 
