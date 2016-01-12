@@ -7,3 +7,15 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+@media all and (-ms-high-contrast:none) {
+  .a-canvas, .a-enter-vr, canvas {
+    display: none !important;
+  }
+
+  body {
+    background-image: url('images/background.png');
+    background-position: center;
+    background-size: cover;
+  }
+}
