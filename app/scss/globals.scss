@@ -14,10 +14,6 @@
   font-weight: 300;
 }
 
-::webkit-scrollbar {
-  display: none;
-}
-
 * {
   font-family: 'PxG', sans-serif;
   transition: .35s;
@@ -73,4 +69,8 @@ h4 {
   @media(max-width: 768px){
     display: block;
   }
+}
+
+::webkit-scrollbar {
+  display: none;
 }
