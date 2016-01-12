@@ -65,10 +65,10 @@ var sceneAdjustments = function(sceneName){
 }
 
 // Initialize Scene
-sceneAdjustments("cubes")
+sceneAdjustments("cubes");
 
 // Set in motion automatic transitions
-var sceneTimer  = 0;
+var sceneTimer  = -3;
 var sceneSlideShowingLoop = function() {
   if (sceneTimer == 11){
     sceneTimer = 0;

@@ -1,6 +1,3 @@
-// Set Section Height
-// $('.overlay-content').height($(window).height());
-
 // Menu Variables
 var overlayShowing = false;
 var downScroll = 0;
@@ -10,17 +7,19 @@ var upScroll = 0;
 var overlayShow = function(){
   overlayShowing = true;
   console.log('Revealing Section');
-  $('.overlay-content').fadeTo("50", 1, function(){
+  $('.overlay-content').css("opacity","1");
+  setTimeout(function(){
     $('.overlay-content').show();
-  });
+  }, 250);
 }
 
 var overlayHide = function(){
   overlayShowing = false;
   console.log('Hiding Section');
-  $('.overlay-content').fadeTo("50", 0, function(){
+  $('.overlay-content').css("opacity","0");
+  setTimeout(function(){
     $('.overlay-content').hide();
-  });
+  }, 250);
 }
 
 var overlayToggle  = function(newState){
