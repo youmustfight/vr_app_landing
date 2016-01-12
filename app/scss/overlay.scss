@@ -1,6 +1,7 @@
 .overlay-content {
   position: absolute;
   overflow: scroll;
+  transition: 0.5s;
   top: 0;
   left: 0;
   z-index: 450;
@@ -8,7 +9,7 @@
   height: 100vh;
   display: none;
   opacity: 0;
-  background-color: rgba(106, 23, 255, 0.95);
+  background-color: rgba(86, 3, 235, 0.95);
 
   text-align: left;
   color: white;
@@ -130,7 +131,6 @@
   }
 
   button {
-    // font-weight: 200;
     font-size: 16px;
     color: rgba(255,255,255,1);
     background: rgba(83, 0, 232, 0.25);
