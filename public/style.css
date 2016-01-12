@@ -103,7 +103,6 @@ h4 {
     margin-bottom: 12px;
     text-align: center; }
   .overlay-content .container {
-    overflow: scroll;
     padding-top: 30vh; }
     @media (max-height: 786px) {
       .overlay-content .container {
