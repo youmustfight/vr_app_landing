@@ -30,6 +30,7 @@ var initiateNextScene = function(){
     sceneAdjustments(sceneList[currentScene]);
     emitAcrossEntities(sceneList[currentScene], 'loadScene', 'revealScene');
   }
+  sceneTimer = 0;
 }
 var initiatePreviousScene = function(){
   var potentialSceneNum = currentScene - 1;
@@ -46,16 +47,20 @@ var initiatePreviousScene = function(){
     sceneAdjustments(sceneList[currentScene]);
     emitAcrossEntities(sceneList[currentScene], 'loadScene', 'revealScene');
   }
+  sceneTimer = 0;
 }
 
 // A-Scene Setup
 var sceneAdjustments = function(sceneName){
   var entity = document.querySelector('#a-frame-scene-container');
+  var header = $('.header');
   if (sceneName == "cubes") {
     entity.setAttribute("fog", "type: linear; color: #240B57; far: 21; near: 8")
+    header.css("background-color", "rgba(106, 23, 255, 0.15)");
   }
   if (sceneName == "tilDeath") {
     entity.setAttribute("fog", "type: linear; color: #240B57; far: 6001; near: 6000;");
+    header.css("background-color", "rgba(46, 216, 96, 0.15)");
   }
 }
 
@@ -63,10 +68,15 @@ var sceneAdjustments = function(sceneName){
 sceneAdjustments("cubes")
 
 // Set in motion automatic transitions
-var sceneSlideShowingLoop = function(){
-  setTimeout(function(){
+var sceneTimer  = 0;
+var sceneSlideShowingLoop = function() {
+  if (sceneTimer == 11){
+    sceneTimer = 0;
     initiateNextScene();
-    sceneSlideShowingLoop();
-  }, 12000)
+  }
 }
-sceneSlideShowingLoop();
+setInterval(function(){
+  sceneTimer++;
+  // console.log('Timer: ', sceneTimer);
+  sceneSlideShowingLoop();
+}, 1000)

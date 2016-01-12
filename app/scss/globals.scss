@@ -1,18 +1,35 @@
+@font-face {
+  font-family: 'PxG';
+  src: url('fonts/PxGroteskBold.woff') format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'PxG';
+  src: url('fonts/PxGroteskRegular.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PxG';
+  src: url('fonts/PxGroteskLight.woff') format('woff');
+  font-weight: 300;
+}
+
 * {
+  font-family: 'PxG', sans-serif;
   transition: .35s;
 }
 
 body {
-  height: 101vh;
-  font-family: sans-serif;
+  height: 100vh;
+  font-family: 'PxG', sans-serif;
 }
 
 h1,h2,h3,h4,h5 {
-  margin: 10px;
+  // margin: 10px;
 }
 
 hr {
-  width: 80%;
+  // width: 80%;
   border: 1px solid rgba(255, 255, 255, .1);
 }
 
@@ -25,7 +42,25 @@ h4 {
   margin-top: 4vh;
 }
 
+.cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .visible {
   z-index: 200;
   opacity: 1;
+}
+
+.visible-md {
+  @media(max-width: 400px){
+    display: none;
+  }
+}
+
+.hide-sm {
+  @media(max-width: 768px){
+    display: none;
+  }
 }
