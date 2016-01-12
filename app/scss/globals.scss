@@ -22,6 +22,9 @@
 body {
   height: 100vh;
   font-family: 'PxG', sans-serif;
+  background-image: url("images/background.png");
+  background-position: center;
+  background-size: cover;
 }
 
 h1,h2,h3,h4,h5 {

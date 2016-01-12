@@ -19,7 +19,10 @@
 
 body {
   height: 100vh;
-  font-family: 'PxG', sans-serif; }
+  font-family: 'PxG', sans-serif;
+  background-image: url("images/background.png");
+  background-position: center;
+  background-size: cover; }
 
 hr {
   border: 1px solid rgba(255, 255, 255, 0.1); }
@@ -76,7 +79,6 @@ h4 {
 
 .overlay-content {
   position: absolute;
-  overflow-y: scroll;
   overflow-x: hidden;
   transition: 0.5s;
   top: 0;
@@ -149,6 +151,8 @@ h4 {
       margin-right: 0%; }
   .overlay-content .right-panel {
     margin-top: 3.6vh; }
+    .overlay-content .right-panel h4 {
+      margin-top: 0; }
     @media (max-width: 768px) {
       .overlay-content .right-panel {
         margin-top: 10vh; } }
@@ -277,9 +281,6 @@ h4 {
   padding-top: 2px;
   text-align: center;
   background-color: rgba(106, 23, 255, 0.15); }
-  @media (max-width: 768px) {
-    .header {
-      opacity: 1; } }
   .header .section {
     float: left;
     width: 33vw;
