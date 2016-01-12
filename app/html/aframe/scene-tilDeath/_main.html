@@ -1,8 +1,17 @@
 <!-- Sky -->
-<a-sky class="scene-tilDeath" src="./public/images/tildeath-sphere.jpg" visible="false" rotation="0 -105 0">
+<!-- src="./public/images/tildeath-sphere.jpg" visible="false" rotation="0 -105 0" -->
+<a-entity class="scene-tilDeath"
+  geometry="primitive: sphere;
+            radius: 5000;
+            segments-width: 64;
+            segments-height: 64;"
+  material=""
+  scale="-1 1 1"
+  rotation="0 -105 0"
+  >
   <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>
   <a-animation attribute="visible" from="true" to="false" begin="hideScene" dur="1" fill="both"></a-animation>
-</a-sky>
+</a-entity>
 <!-- Now Playing -->
 <a-image class="scene-tilDeath" position="6.5 10 -3.5" rotation="0 -90 0" src="public/images/tildeath-logo.png" width="2.2" height="1" scale="1.8 1.8 1.8" visible="false">
   <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>

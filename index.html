@@ -3,39 +3,111 @@
   <head>
     <meta charset="utf-8">
     <title>EEVO</title>
-    <meta name="description" content="EEVO">
+    <meta name="description" content="EEVO Virtual Reality App">
     <meta name="theme-color" content="#111111">
     <meta name="viewport" content="width=device-width" initial-scale="1.0" maximum-scale="1.0" minimum-scale="1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="public/style.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" href="public/ie.css" />
     <![endif]-->
-
-    <script src="node_modules/aframe/dist/aframe.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/style.css" />
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+    
   </head>
 
   <body>
+
+  <!-- Header Bar -->
+    <div class="header">
+  <div class="section">
+    <button class="header-hamburger toggle-overlay">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="section">
+    <img src="public/images/logo.png">
+  </div>
+  <div class="section download-the-app">
+    <!-- <div class="hide-sm">
+      <img class="download" title="Oculus Rift" src="public/images/oculus.png">
+      <a href="#"><img class="download" title="Google Play" src="public/images/google-play.png"></a>
+      <a href="#"><img class="download" title="Google Cardboard" src="public/images/cardboard.png"></a>
+      <p class="header-text">Get the App</p>
+    </div> -->
+    <div>
+      <button class="toggle-overlay">Get App</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Tutorial Overlay -->
+    <div class="tutorial-overlay">
+  <p>explore the world with your phone or by clicking and dragging with your mouse</p>
+  <p>hover on something to select it</p>
+</div>
+
+  <!-- Menu Overlay -->
+    <div class="overlay-content">
+  <div class="container">
+    <section class="left-panel col-xs-12 col-sm-7">
+      <!-- <img class="eevo toggle-overlay" src="public/images/logo.png" > -->
+      <h1>Entertainment Evolved</h1>
+      <hr>
+      <div class="platform cf">
+        <a href="#"><div>
+          <img src="public/images/cardboard.png">  
+        </div></a>
+        <a href="#"><div>
+          <img src="public/images/oculus.png">  
+        </div></a>
+        <a href="#"><div>
+          <img src="public/images/google-play.png">  
+        </div></a>
+      </div>
+      <h6>EEVO is coming soon for Cardboard, Oculus, and Android</h6>
+    </section>
+    <section class="right-panel col-xs-12 col-sm-4 col-sm-offset-1">
+      <h4>Launch Your Own VR Experiences</h4>
+      <hr>
+      <h6>Showcase your work with EEVO</h6>
+      <a href="#"><button>Contact Us</button></a>
+      <h6>View our flaship product, EEVO Edge.</h6>
+      <a href="#"><button>Go to EEVO Edge</button></a>
+    </section>
+  </div>
+  <div class="container overlay-links">
+    <section class="col-xs-12">
+      <a href="#"><h6>EEVO Edge</h6></a>
+      <h5>&emsp;|&emsp;</h5>
+      <a href="#"><h6>About Us</h6></a>
+      <h5>&emsp;|&emsp;</h5>
+      <a href="#"><h6>Careers</h6></a>
+      <h5>&emsp;|&emsp;</h5>
+      <a href="#"><h6>News</h6></a>
+      <h5>&emsp;|&emsp;</h5>
+      <a href="#"><h6>Contact Us</h6></a>
+    </section>
+  </div>
+</div>
 
   <!-- A-Frame -->
     <!-- Universal A-Frame Entities -->
 <a-scene id="a-frame-scene-container" fog="type: linear; color: #240B57; far: 21; near: 8">
   <a-camera cursor-visible="true" position="0 8.7 0" rotation="0 -63 0" fly="false"></a-camera>
 
-  <!-- Persistent Sections between Scenes -->
-  <!-- EEVO Logo -->
-<!-- <a-image position="6.5 7 -3.5" rotation="0 -90 0" src="public/images/logo.png" width="1.28" height="0.64">
-  <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="0.5 0.5 0.5" begin="1000" dur="350" fill="both" easing="ease-out"></a-animation>
-</a-image> -->
+  <a-assets>
+  </a-assets>
 
-<!-- Scene Switch Button -->
+  <!-- Persistent Sections between Scenes -->
+  <!-- Scene Switch Button -->
 <!-- Previous Scene Button -->
 <a-image 
   id="previousSceneButton"
   position="6.5 9.5 -7.5" rotation="0 -90 0" src="public/images/arrow-hover.png" width="0.762" height="0.762">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="2700" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="3700" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
 <a-entity
   id="previousSceneWaves"
@@ -44,7 +116,7 @@
   visible="false"
   geometry="primitive: torus; radiusTubular: .01; radius: 0.4; height: .1; openEnded: false; segmentsTubular: 40;"
   material="transparent: true; color: rgb(255,255,255); roughness: 0; metalness: 0; opacity: 1;">
-  <a-animation begin="3300" attribute="visible" to="true"></a-animation>
+  <a-animation begin="4300" attribute="visible" to="true"></a-animation>
   <a-animation begin="previousSceneButtonisInFocus" attribute="scale" from="1 1 1" to="1.2 1.2 1.2" dur="200" easing="ease-in"></a-animation>
   <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="200"></a-animation>
 </a-entity>
@@ -54,7 +126,7 @@
   id="nextSceneButton"
   position="6.5 9.5 0.5" rotation="0 -90 180" src="public/images/arrow-hover.png" width="0.762" height="0.762">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="2900" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="3900" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
 <a-entity
   id="nextSceneWaves"
@@ -63,7 +135,7 @@
   visible="false"
   geometry="primitive: torus; radiusTubular: .01; radius: 0.4; height: .1; openEnded: false; segmentsTubular: 40;"
   material="transparent: true; color: rgb(255,255,255); roughness: 0; metalness: 0; opacity: 1;">
-  <a-animation begin="3300" attribute="visible" to="true"></a-animation>
+  <a-animation begin="4300" attribute="visible" to="true"></a-animation>
   <a-animation begin="nextSceneButtonisInFocus" attribute="scale" from="1 1 1" to="1.2 1.2 1.2" dur="200" easing="ease-in"></a-animation>
   <a-animation begin="lostFocus" attribute="scale" to="1 1 1" dur="200"></a-animation>
 </a-entity>
@@ -71,29 +143,26 @@
 <!-- Available For -->
 <a-image position="6.5 6.5 -3.5" rotation="0 -90 0" src="public/images/tagline2.png" width="0.87" height="0.13">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="1000" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="2500" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
 <a-image 
   class="download-link" data-link="http://www.google.com"
   position="6.5 5.7 -5.1" rotation="0 -90 0" src="public/images/cardboard.png" width="0.8" height="0.5" >
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="1.5 1.5 1.5" begin="1500" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1.5 1.5 1.5" begin="3000" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
 <a-image 
   class="download-link" data-link="http://www.facebook.com"
   position="6.5 5.7 -3.4" rotation="0 -90 0" src="public/images/google-play.png" width="0.45" height="0.5">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="1.5 1.5 1.5" begin="1650" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1.5 1.5 1.5" begin="3150" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
 <a-image 
   class="download-link" 
   position="6.5 5.7 -2" rotation="0 -90 0" src="public/images/oculus.png" width="0.8" height="0.5">
   <a-animation attribute="visible" from="false" to="true" begin="100" dur="1" fill="both"></a-animation>
-  <a-animation attribute="scale" from="0 0 0" to="1.5 1.5 1.5" begin="1800" dur="350" fill="both" easing="ease-out"></a-animation>
+  <a-animation attribute="scale" from="0 0 0" to="1.5 1.5 1.5" begin="3300" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-image>
-
-<!-- Launch Overlay -->
-
 
   <!-- Scenes -->
   <!-- Sky -->
@@ -104,13 +173,17 @@
 <!-- Now-Playing -->
 <a-image class="scene-cubes" position="6.5 10 -3.5" rotation="0 -90 0" src="public/images/logo.png" width="2.56" height="1.28" scale="1.8 1.8 1.8">
   <!-- <a-animation attribute="visible" from="false" to="true" begin="loadScene" dur="1" fill="both"></a-animation> -->
+  <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="2800" dur="350" fill="both" easing="ease-out"></a-animation>
   <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="revealScene" dur="350" fill="both" easing="ease-out"></a-animation>
   <a-animation attribute="scale" from="1.8 1.8 1.8" to="0 0 0" begin="hideScene" dur="350" fill="both" easing="ease-out"></a-animation>
   <!-- <a-animation attribute="visible" from="true" to="false" begin="removeScene" dur="1" fill="both"></a-animation> -->
 </a-image>
 <a-image class="scene-cubes" position="6.5 8.5 -3.5" rotation="0 -90 0" src="public/images/tagline.png" width="2.71" height="0.15" scale="1.8 1.8 1.8">
+  <!-- <a-animation attribute="visible" from="false" to="true" begin="loadScene" dur="1" fill="both"></a-animation> -->
+  <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="2800" dur="350" fill="both" easing="ease-out"></a-animation>
   <a-animation attribute="scale" from="0 0 0" to="1.8 1.8 1.8" begin="revealScene" dur="350" fill="both" easing="ease-out"></a-animation>
   <a-animation attribute="scale" from="1.8 1.8 1.8" to="0 0 0" begin="hideScene" dur="350" fill="both" easing="ease-out"></a-animation>
+  <!-- <a-animation attribute="visible" from="true" to="false" begin="removeScene" dur="1" fill="both"></a-animation> -->
 </a-image>
 <!-- Pillars -->
 <a-cube class="scene-cubes" position="1 0 -13" translate="0 4.2 0" width="4.2" depth="4.2" height="60" color="#6A17FF" roughness="0.8">
@@ -190,10 +263,19 @@
   <a-animation attribute="scale" from="1 1 1" to="0 0 0" begin="hideScene" dur="350" fill="both" easing="ease-out"></a-animation>
 </a-cube>
   <!-- Sky -->
-<a-sky class="scene-tilDeath" src="./public/images/tildeath-sphere.jpg" visible="false" rotation="0 -105 0">
+<!-- src="./public/images/tildeath-sphere.jpg" visible="false" rotation="0 -105 0" -->
+<a-entity class="scene-tilDeath"
+  geometry="primitive: sphere;
+            radius: 5000;
+            segments-width: 64;
+            segments-height: 64;"
+  material=""
+  scale="-1 1 1"
+  rotation="0 -105 0"
+  >
   <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>
   <a-animation attribute="visible" from="true" to="false" begin="hideScene" dur="1" fill="both"></a-animation>
-</a-sky>
+</a-entity>
 <!-- Now Playing -->
 <a-image class="scene-tilDeath" position="6.5 10 -3.5" rotation="0 -90 0" src="public/images/tildeath-logo.png" width="2.2" height="1" scale="1.8 1.8 1.8" visible="false">
   <a-animation attribute="visible" from="false" to="true" begin="revealScene" dur="1" fill="both"></a-animation>
@@ -210,82 +292,8 @@
 
 </a-scene>
 
-  <!-- Menu Overlay -->
-    <div class="overlay-content">
-  <div class="container">
-    <section class="left-panel col-xs-12 col-sm-7">
-      <!-- <img class="eevo toggle-overlay" src="public/images/logo.png" > -->
-      <h1>Entertainment Evolved</h1>
-      <hr>
-      <div class="platform cf">
-        <a href="#"><div>
-          <img src="public/images/cardboard.png">  
-        </div></a>
-        <a href="#"><div>
-          <img src="public/images/oculus.png">  
-        </div></a>
-        <a href="#"><div>
-          <img src="public/images/google-play.png">  
-        </div></a>
-      </div>
-      <h6>EEVO is coming soon for Cardboard, Oculus, and Android</h6>
-    </section>
-    <section class="right-panel col-xs-12 col-sm-4 col-sm-offset-1">
-      <h4>Launch Your Own VR Experiences</h4>
-      <hr>
-      <h6>Showcase your work with EEVO</h6>
-      <a href="#"><button>Contact Us</button></a>
-      <h6>View our flaship product, EEVO Edge.</h6>
-      <a href="#"><button>Go to EEVO Edge</button></a>
-    </section>
-  </div>
-  <div class="container overlay-links">
-    <section class="col-xs-12">
-      <a href="#"><h6>EEVO Edge</h6></a>
-      <h5>&emsp;|&emsp;</h5>
-      <a href="#"><h6>About Us</h6></a>
-      <h5>&emsp;|&emsp;</h5>
-      <a href="#"><h6>Careers</h6></a>
-      <h5>&emsp;|&emsp;</h5>
-      <a href="#"><h6>News</h6></a>
-      <h5>&emsp;|&emsp;</h5>
-      <a href="#"><h6>Contact Us</h6></a>
-    </section>
-  </div>
-</div>
-
-  <!-- Header Bar -->
-    <div class="header">
-  <div class="section">
-    <button class="header-hamburger toggle-overlay">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-  <div class="section">
-    <img src="public/images/logo.png">
-  </div>
-  <div class="section download-the-app">
-    <!-- <div class="hide-sm">
-      <img class="download" title="Oculus Rift" src="public/images/oculus.png">
-      <a href="#"><img class="download" title="Google Play" src="public/images/google-play.png"></a>
-      <a href="#"><img class="download" title="Google Cardboard" src="public/images/cardboard.png"></a>
-      <p class="header-text">Get the App</p>
-    </div> -->
-    <div>
-      <button class="toggle-overlay">Get App</button>
-    </div>
-  </div>
-</div>
-
-  <!-- Footer Bar -->
-    
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    <script type="text/javascript" src="public/main.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="public/main.js"></script>
 
   </body>
 </html>
