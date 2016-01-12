@@ -1,15 +1,27 @@
+@font-face {
+  font-family: 'PxG';
+  src: url('fonts/PxGroteskBold.woff') format('woff');
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'PxG';
+  src: url('fonts/PxGroteskRegular.woff') format('woff');
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'PxG';
+  src: url('fonts/PxGroteskLight.woff') format('woff');
+  font-weight: 300; }
+
 * {
+  font-family: 'PxG', sans-serif;
   transition: .35s; }
 
 body {
-  height: 101vh;
-  font-family: sans-serif; }
-
-h1, h2, h3, h4, h5 {
-  margin: 10px; }
+  height: 100vh;
+  font-family: 'PxG', sans-serif; }
 
 hr {
-  width: 80%;
   border: 1px solid rgba(255, 255, 255, 0.1); }
 
 h1 {
@@ -19,9 +31,22 @@ h4 {
   font-weight: 300;
   margin-top: 4vh; }
 
+.cf {
+  content: "";
+  display: table;
+  clear: both; }
+
 .visible {
   z-index: 200;
   opacity: 1; }
+
+@media (max-width: 400px) {
+  .visible-md {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .hide-sm {
+    display: none; } }
 
 .a-canvas, canvas {
   height: 100% !important;
@@ -42,18 +67,19 @@ h4 {
 
 .overlay-content {
   position: absolute;
+  overflow: scroll;
   top: 0;
   left: 0;
-  z-index: 500;
+  z-index: 450;
   width: 100vw;
   height: 100vh;
   display: none;
   opacity: 0;
   background-color: rgba(106, 23, 255, 0.95);
-  text-align: center;
+  text-align: left;
   color: white; }
   .overlay-content hr {
-    opacity: 0.2; }
+    opacity: 0.5; }
   .overlay-content input, .overlay-content button {
     width: 100%;
     padding: 9px 14px 8px;
@@ -67,36 +93,101 @@ h4 {
     margin-bottom: 12px;
     text-align: center; }
   .overlay-content .container {
-    height: 100vh;
-    overflow: scroll; }
+    overflow: scroll;
+    padding-top: 30vh; }
+    @media (max-height: 786px) {
+      .overlay-content .container {
+        padding-top: 20vh; } }
   .overlay-content img.eevo {
     width: 100%;
     max-width: 160px;
     height: auto;
     padding: 12px;
     margin-top: 10vh; }
-  .overlay-content .platform {
-    height: 36px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px; }
+  .overlay-content .left-panel .platform {
+    width: 100%; }
+    .overlay-content .left-panel .platform div {
+      transition: 0.3s;
+      float: left;
+      width: 30%;
+      height: 120px;
+      margin-bottom: 8px;
+      margin-right: 5%;
+      background-color: rgba(83, 0, 232, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      text-align: center; }
+      .overlay-content .left-panel .platform div:hover {
+        background-color: rgba(106, 23, 255, 0.85); }
+      .overlay-content .left-panel .platform div img {
+        position: relative;
+        top: 17.5%;
+        width: auto;
+        max-width: 90%;
+        height: 65%;
+        max-height: 70px;
+        margin: 0 auto;
+        padding: 8%;
+        opacity: 1; }
+      @media (max-height: 786px) {
+        .overlay-content .left-panel .platform div {
+          max-height: 70px; } }
+    .overlay-content .left-panel .platform a:last-of-type > div {
+      margin-right: 0%; }
+  .overlay-content .right-panel {
+    margin-top: 3.6vh; }
+    @media (max-width: 768px) {
+      .overlay-content .right-panel {
+        margin-top: 10vh; } }
   .overlay-content .overlay-links {
-    margin-top: 2rem;
-    margin-bottom: 6rem; }
+    width: 100%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: left; }
+    @media (min-width: 768px) {
+      .overlay-content .overlay-links {
+        text-align: center;
+        position: absolute;
+        bottom: 2.5vh;
+        margin-top: 0;
+        margin-bottom: 0; } }
+    .overlay-content .overlay-links h5, .overlay-content .overlay-links h6 {
+      display: inline; }
+    .overlay-content .overlay-links h5 {
+      color: rgba(50, 50, 50, 0.25);
+      cursor: default; }
+    .overlay-content .overlay-links h6 {
+      font-weight: 400; }
+    .overlay-content .overlay-links a {
+      transition: 0.1s;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6); }
+      .overlay-content .overlay-links a:hover {
+        color: white; }
+  .overlay-content button {
+    font-size: 16px;
+    color: white;
+    background: rgba(83, 0, 232, 0.25);
+    border: 1px solid white;
+    border-radius: 1px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    height: 48px; }
+    .overlay-content button:hover {
+      color: #6a17ff;
+      background: white; }
   .overlay-content .close-overlay {
     cursor: pointer; }
 
-.footer {
+.footer-container {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 400;
-  width: 50px;
+  width: 100%;
   height: 50px;
-  background: rgba(0, 0, 0, 0.35);
-  opacity: 0.7 !important;
-  cursor: pointer; }
+  text-align: center;
+  background-color: rgba(106, 23, 255, 0.82); }
 
 #hamburger {
   position: absolute;
@@ -127,3 +218,67 @@ h4 {
 
 .animate .bar:nth-child(3) {
   transform: translateY(-12px) rotate(-135deg); }
+
+.header {
+  transition: 0.4s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 400;
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(106, 23, 255, 0.1); }
+  @media (max-width: 768px) {
+    .header {
+      opacity: 1; } }
+  .header .section {
+    float: left;
+    width: 33vw;
+    min-width: 33vw;
+    height: 50px;
+    margin-right: .5vw; }
+    @media (max-width: 768px) {
+      .header .section {
+        width: 50vw;
+        margin-right: 0;
+        text-align: left; }
+        .header .section img:not(.download) {
+          padding-left: 56px; } }
+    .header .section:last-of-type {
+      margin-right: 0%;
+      padding-right: 2%; }
+    .header .section img {
+      height: 46px;
+      padding-top: 4px; }
+    .header .section p {
+      float: right;
+      width: auto;
+      padding-right: 20px; }
+    .header .section .download {
+      height: 34px;
+      width: auto;
+      float: right;
+      margin-right: 16px;
+      padding-top: 14px;
+      margin-top: 2px;
+      opacity: 0.9; }
+      .header .section .download:hover {
+        opacity: 1; }
+
+.header-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 450;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0.7 !important;
+  cursor: pointer; }
+
+.header-text {
+  font-size: 13px;
+  color: white;
+  padding-top: 16px;
+  margin-right: -6px; }

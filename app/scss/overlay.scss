@@ -1,19 +1,20 @@
 .overlay-content {
   position: absolute;
+  overflow: scroll;
   top: 0;
   left: 0;
-  z-index: 500;
+  z-index: 450;
   width: 100vw;
   height: 100vh;
   display: none;
   opacity: 0;
   background-color: rgba(106, 23, 255, 0.95);
 
-  text-align: center;
+  text-align: left;
   color: white;
 
   hr {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 
   input, button {
@@ -32,8 +33,12 @@
   }
 
   .container {
-    height: 100vh;
+    // height: 100vh;
     overflow: scroll;
+    padding-top: 30vh;
+    @media(max-height:786px){
+      padding-top: 20vh;
+    }
   }
 
   img.eevo {
@@ -44,17 +49,99 @@
     margin-top: 10vh;
   }
 
-  .platform {
-    height: 36px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  .left-panel {
+    .platform {
+      width: 100%;
+      div {
+        transition: 0.3s;
+        float: left;
+        width: 30%;
+        height: 120px;
+        margin-bottom: 8px;
+        margin-right: 5%;
+        background-color: rgba(83, 0, 232, 0.25);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 2px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        // opacity: 0.65;
+        // overflow: scroll;
+        text-align: center;
+        &:hover {
+          background-color: rgba(106, 23, 255, 0.85);
+        }
+        img {
+          position: relative;
+          top: 17.5%;
+          width: auto;
+          max-width: 90%;
+          height: 65%;
+          max-height: 70px;
+          margin: 0 auto;
+          padding: 8%;
+          opacity: 1;
+        }
+        @media(max-height:786px){
+          max-height: 70px;
+        }
+      }
+      a:last-of-type > div {
+        margin-right: 0%;
+      }
+    }
+  }
+
+  .right-panel {
+    margin-top: 3.6vh;
+    @media(max-width: 768px){
+      margin-top: 10vh;
+    }
   }
 
   .overlay-links {
-    margin-top: 2rem;
-    margin-bottom: 6rem;
+    width: 100%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: left;
+    @media(min-width: 768px){
+      text-align: center;
+      position: absolute;
+      bottom: 2.5vh;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h5, h6 {
+      display: inline;
+    }
+    h5 {
+      color: rgba(50,50,50,0.25);
+      cursor: default;
+    }
+    h6 {
+      font-weight: 400;
+    }
+    a {
+      transition: 0.1s;
+      text-decoration: none;
+      color: rgba(255,255,255,0.6);
+      &:hover {
+        color: rgba(255,255,255,1);
+      }
+    }
+  }
+
+  button {
+    // font-weight: 200;
+    font-size: 16px;
+    color: rgba(255,255,255,1);
+    background: rgba(83, 0, 232, 0.25);
+    border: 1px solid white;
+    border-radius: 1px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    height: 48px;
+    &:hover {
+      color: rgba(106, 23, 255, 1);
+      background: rgba(255,255,255,1);
+    }
   }
 
   .close-overlay {
