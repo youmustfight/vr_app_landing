@@ -335,3 +335,11 @@ h4 {
       color: white;
       padding-top: 16px;
       margin-right: -6px; }
+
+.ie8910 .a-canvas, .ie10up .a-canvas, .ie8910 .a-enter-vr, .ie10up .a-enter-vr, .ie8910 canvas, .ie10up canvas {
+  display: none !important; }
+.ie8910 body, .ie10up body {
+  background-image: url('images/background.png');
+  background-position: center;
+  background-size: cover; }
+

@@ -1,0 +1,25 @@
+// Ditch AFrame and put a static background
+
+%IE-filler-class {
+  .a-canvas, .a-enter-vr, canvas {
+    display: none !important;
+  }
+  body {
+    background-image: url('images/background.png');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+// IE 8,9,10...
+@media screen\0 {
+    .ie8910 {
+      @extend %IE-filler-class;
+    }
+}
+// IE 11 and up...
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   .ie10up{
+    @extend %IE-filler-class;
+  }
+}
