@@ -1023,4 +1023,6 @@ h4 {
   background-image: url('images/background.png');
   background-position: center;
   background-size: cover; }
+.ie8910 .tutorial-overlay, .ie10up .tutorial-overlay {
+  display: none; }
 
