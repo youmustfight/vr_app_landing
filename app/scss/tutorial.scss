@@ -7,3 +7,18 @@
   z-index: 425;
   background-color: rgba(36, 11, 87, 0.95);
 }
+
+.tutorial-gif {
+  margin-top: 40vh;
+  text-align: center;
+  color: white;
+  h4 {
+    font-weight: 700;
+  }
+  img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    opacity: 0.9;
+  }
+}

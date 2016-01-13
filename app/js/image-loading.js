@@ -22,4 +22,4 @@ setTimeout(function(){
     $('a-entity.scene-tilDeath').attr("material","src: #tilDeath-sphere");
   });
 
-}, 800);
+}, 500);

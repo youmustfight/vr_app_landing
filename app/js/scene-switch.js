@@ -56,11 +56,11 @@ var sceneAdjustments = function(sceneName){
   var header = $('.header');
   if (sceneName == "cubes") {
     entity.setAttribute("fog", "type: linear; color: #240B57; far: 21; near: 8")
-    header.css("background-color", "rgba(106, 23, 255, 0.15)");
+    header.css("background-color", "rgba(106, 23, 255, 0.85)");
   }
   if (sceneName == "tilDeath") {
     entity.setAttribute("fog", "type: linear; color: #240B57; far: 6001; near: 6000;");
-    header.css("background-color", "rgba(46, 216, 96, 0.15)");
+    header.css("background-color", "rgba(46, 216, 96, 0.85)");
   }
 }
 
