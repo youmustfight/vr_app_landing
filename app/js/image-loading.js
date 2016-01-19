@@ -21,5 +21,4 @@ setTimeout(function(){
   $('#tilDeath-sphere').on('load', function(){
     $('a-entity.scene-tilDeath').attr("material","src: #tilDeath-sphere");
   });
-
-}, 500);
+}, 550);
