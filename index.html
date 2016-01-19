@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>EEVO</title>
+    <link rel="icon" type="image/png" href="public/images/favicon.png">
     <meta name="description" content="EEVO Virtual Reality App">
     <meta name="theme-color" content="#111111">
     <meta name="viewport" content="width=device-width" initial-scale="1.0" maximum-scale="1.0" minimum-scale="1.0">
-    <!--[if IE]>
-      <link rel="stylesheet" type="text/css" href="public/ie.css" />
-    <![endif]-->
     <link rel="stylesheet" type="text/css" href="public/style.css" />
+    <!-- 
     <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+     -->
+     <script type="text/javascript" src="node_modules/aframe/dist/aframe.js"></script>
     
   </head>
 
@@ -30,14 +31,14 @@
     <img src="public/images/logo.png">
   </div>
   <div class="section download-the-app">
-    <!-- <div class="hide-sm">
-      <img class="download" title="Oculus Rift" src="public/images/oculus.png">
-      <a href="#"><img class="download" title="Google Play" src="public/images/google-play.png"></a>
-      <a href="#"><img class="download" title="Google Cardboard" src="public/images/cardboard.png"></a>
-      <p class="header-text">Get the App</p>
-    </div> -->
-    <div>
-      <button class="toggle-overlay">Get App</button>
+    <div class="hide-sm">
+      <button class="download" ><img title="Oculus Rift" src="public/images/oculus.png"></button>
+      <button class="download" ><img title="Google Play" src="public/images/google-play.png"></button>
+      <button class="download" ><img title="Google Cardboard" src="public/images/cardboard.png"></button>
+      <h4 class="header-text">Coming Soon</h4>
+    </div>
+    <div class="show-sm">
+      <button class="toggle-overlay">Get the App</button>
     </div>
   </div>
 </div>

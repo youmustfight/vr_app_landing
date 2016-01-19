@@ -59,4 +59,7 @@
   width: 24px;
   border-radius: 50%;
   -webkit-transform: translateY(-10px) translateX(-2px);
+  -moz-transform: translateY(-10px) translateX(-2px);
+  -o-transform: translateY(-10px) translateX(-2px);
+  transform: translateY(-10px) translateX(-2px);
 }

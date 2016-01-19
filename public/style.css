@@ -928,7 +928,10 @@ h4 {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  -webkit-transform: translateY(-10px) translateX(-2px); }
+  -webkit-transform: translateY(-10px) translateX(-2px);
+  -moz-transform: translateY(-10px) translateX(-2px);
+  -o-transform: translateY(-10px) translateX(-2px);
+  transform: translateY(-10px) translateX(-2px); }
 
 .header {
   transition: 0.4s;
@@ -940,15 +943,28 @@ h4 {
   height: 54px;
   padding-top: 2px;
   text-align: center;
-  background-color: rgba(106, 23, 255, 0.85); }
+  background-color: rgba(106, 23, 255, 0.85);
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.35); }
   .header .section {
     float: left;
-    width: 33vw;
-    min-width: 33vw;
     height: 50px; }
-    .header .section:last-of-type {
+    .header .section:nth-child(1) {
+      width: 44vw; }
+      @media (max-width: 768px) {
+        .header .section:nth-child(1) {
+          width: 33vw; } }
+    .header .section:nth-child(2) {
+      width: 12vw; }
+      @media (max-width: 768px) {
+        .header .section:nth-child(2) {
+          width: 33vw; } }
+    .header .section:nth-child(3) {
+      width: 44vw;
       margin-right: 0%;
       padding-right: 2%; }
+      @media (max-width: 768px) {
+        .header .section:nth-child(3) {
+          width: 33vw; } }
     .header .section img {
       height: 46px;
       padding-top: 4px; }
@@ -956,16 +972,20 @@ h4 {
       float: right;
       width: auto;
       padding-right: 20px; }
-    .header .section .download {
-      height: 34px;
-      width: auto;
+    .header .section button.download {
       float: right;
-      margin-right: 16px;
-      padding-top: 14px;
-      margin-top: 2px;
-      opacity: 0.9; }
-      .header .section .download:hover {
-        opacity: 1; }
+      margin-right: 4px; }
+      .header .section button.download img {
+        height: 28px;
+        width: auto;
+        float: right;
+        margin: 0;
+        padding: 3px;
+        opacity: 0.9; }
+        .header .section button.download img:hover {
+          opacity: 1; }
+      .header .section button.download:hover {
+        background-color: rgba(23, 23, 23, 0.1); }
     .header .section button {
       float: right;
       font-size: 14px;
@@ -991,10 +1011,14 @@ h4 {
       .header .section .header-hamburger:hover > span {
         background-color: #6a17ff; }
     .header .section .header-text {
+      float: right;
       font-size: 13px;
+      font-weight: bold;
       color: white;
-      padding-top: 16px;
-      margin-right: -6px; }
+      margin: 0;
+      padding: 0;
+      padding-top: 17px;
+      margin-right: 12px; }
 
 .tutorial-overlay {
   position: absolute;

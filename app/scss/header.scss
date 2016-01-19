@@ -9,15 +9,31 @@
   padding-top: 2px;
   text-align: center;
   background-color: rgba(106, 23, 255, 0.85);
+  box-shadow: 0px 3px 9px rgba(0,0,0,0.35);
   .section {
     float: left;
-    width: 33vw;
-    min-width: 33vw;
+
     height: 50px;
 
-    &:last-of-type {
+    &:nth-child(1){
+      width: 44vw;
+      @media(max-width: 768px){
+        width: 33vw;
+      }
+    }
+    &:nth-child(2){
+      width: 12vw;
+      @media(max-width: 768px){
+        width: 33vw;
+      }
+    }
+    &:nth-child(3){
+      width: 44vw;
       margin-right: 0%;
       padding-right: 2%;
+      @media(max-width: 768px){
+        width: 33vw;
+      }
     }
     img {
       height: 46px;
@@ -28,16 +44,22 @@
       width: auto;
       padding-right: 20px;
     }
-    .download {
-      height: 34px;
-      width: auto;
+    button.download {
       float: right;
-      margin-right: 16px;
-      padding-top: 14px;
-      margin-top: 2px;
-      opacity: 0.9;
+      margin-right: 4px;
+      img {
+        height: 28px;
+        width: auto;
+        float: right;
+        margin: 0;
+        padding: 3px;
+        opacity: 0.9;
+        &:hover {
+          opacity: 1;
+        }
+      }
       &:hover {
-        opacity: 1;
+        background-color: rgba(23, 23, 23, 0.1);
       }
     }
     button {
@@ -72,12 +94,14 @@
       }
     }
     .header-text {
+      float: right;
       font-size: 13px;
-      // font-weight: bold;
+      font-weight: bold;
       color: rgba(255, 255, 255, 1);
-      // text-transform: uppercase;
-      padding-top: 16px;
-      margin-right: -6px;
+      margin: 0;
+      padding: 0;
+      padding-top: 17px;
+      margin-right: 12px;
     }
   }
 }
